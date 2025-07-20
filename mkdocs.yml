@@ -1,0 +1,52 @@
+site_name: bq-volatility-models
+repo_url: https://github.com/saadhamid96/bq-volatility-models
+site_url: https://saadhamid96.github.io/bq-volatility-models
+site_description: BayesQuad for calibrating stochastic volatility models.
+site_author: Saad Hamid
+edit_uri: edit/main/docs/
+repo_name: saadhamid96/bq-volatility-models
+copyright: Maintained by <a href="https://saadhamid96.com">saadhamid96</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src/bq_volatility_models"]
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/saadhamid96/bq-volatility-models
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/bq-volatility-models
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true

@@ -42,10 +42,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 
-
 [tool.mypy]
-files = ["src","tests"
-]
+files = ["src","tests"]
 check_untyped_defs = true
 disallow_untyped_decorators = true
 disallow_untyped_defs = true
@@ -60,7 +58,6 @@ warn_unused_ignores = true
 testpaths = ["tests"]
 
 [tool.ruff]
-target-version = "py39"
 line-length = 88
 fix = true
 
@@ -76,4 +73,3 @@ skip_empty = true
 [tool.coverage.run]
 branch = true
 source = ["src"]
-

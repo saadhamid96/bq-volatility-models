@@ -17,6 +17,12 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+dependencies = [
+    "numpy>=2.0.2",
+    "pandas>=2.3.1",
+    "scipy>=1.13.1",
+    "yfinance>=0.2.65",
+]
 
 [project.urls]
 Homepage = "https://saadhamid96.github.io/bq-volatility-models/"
@@ -35,12 +41,17 @@ dev = [
     "mkdocs",
     "mkdocs-material",
     "mkdocstrings[python]",
+    "pandas-stubs>=2.2.2.240807",
 ]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.uv]
+required-environments = [
+    "sys_platform == 'macosx_12_0' and platform_machine == 'x86_64'"
+]
 
 [tool.mypy]
 files = ["src","tests"]
